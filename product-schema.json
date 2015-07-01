@@ -1,0 +1,39 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Product",
+    "description": "A product on fashion Kart",
+    "type": "object",
+    "properties": {
+        "url": {
+            "description": "The URL for a product",
+            "type": "string"
+        },
+        "name": {
+            "description": "Name of the product",
+            "type": "string"
+        },
+        "price": {
+            "type": "number",
+            "minimum": 0,
+            "exclusiveMinimum": true
+        },
+        "mrp": {
+            "type": "number",
+            "minimum": 0,
+            "exclusiveMinimum": true
+        },
+        "gender": {
+              "type" : "boolean",
+              "male": true,
+              "description": "true for male and false for female"
+        },
+         "imageURL": {
+              "type": "array",
+              "items": {
+                "type": "string"
+            },
+            "minItems": 1
+    }
+    },
+    "required": ["url","price"]
+}
